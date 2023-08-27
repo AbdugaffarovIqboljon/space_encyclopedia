@@ -1,0 +1,75 @@
+{
+  "auto_slide" :  "Avtomatik Slayd",
+  "languages" :  "Tillar",
+  "funny_facts" : "Qiziqarli Faktlar!",
+  "Mercury" : "Merkuriy",
+  "Venus" : "Venera",
+  "Earth" : "Yer",
+  "Mars" : "Mars",
+  "Jupiter" : "Yupiter",
+  "Saturn" : "Saturn",
+  "Uranus" : "Uran",
+  "Neptune" : "Neptun",
+
+  "mercury_desc" :  "Tavsif:\nMerkuriy bizning quyosh sistemamizdagi eng kichik sayyora bo'lib, u haroratning keskin o'zgarishi bilan mashhur hisoblanadi.",
+  "mercury_size" :  "Hajmi:\nDiametri taxminan 4,880 km (3,032 milya)\n",
+  "mercury_distance_from_sun" :  "Quyoshdan uzoqlik masofasi:\nTaxminan 57,9 million km (36,0 million milya)\n",
+  "mercury_temperature" :  "Harorat:\nKunduzi juda issiq (430 ° C yoki 806 ° F gacha) dan kechasi juda sovuq (-180 ° C yoki -292 ° F gacha) oralig'ida.\n",
+  "mercury_additional_info" :  "Qo'shimcha ma'lumot:\nU juda nozik atmosferaga ega, deyarli oy yo'q va unga bir nechta kosmik missiyalar, jumladan NASA MESSENJERi tashrif buyurgan.\n",
+
+  "venus_desc": "Tavsif:\nVenera o'zining kattaligi va tarkibi o'xshashligi sababli ko'pincha Yerning 'qardosh sayyorasi' deb ataladi, ammo uning haddan tashqari issiqlik effekti sababli uni yashash uchun yaroqsiz qiladi.",
+  "venus_size": "Hajmi:\nDiametri taxminan 12,104 km (7,521 milya)\n",
+  "venus_distance_from_sun": "Quyoshdan uzoqlik masofasi:\nTaxminan 108,2 million km (67,2 million milya)\n",
+  "venus_temperature": "Harorat:\nUning o'rtacha sirt harorati taxminan 465 ° C (869 ° F), Quyoshdan uzoqroq bo'lishiga qaramay, Merkuriydan issiqroq.\n",
+  "venus_additional_info": "Qo'shimcha ma'lumot:\nVenera asosan karbonat angidriddan tashkil topgan qalin atmosferaga ega bo'lib, u issiqlikni ushlab turadi va uning kuydiruvchi sirt haroratini yaratadi.",
+
+  "earth_desc": "Tavsif:\nYer turli xil ekotizimlar va nafas oladigan atmosferaga ega bo'lgan hayotni qo'llab-quvvatlaydigan yagona ma'lum sayyoradir.",
+  "earth_size": "Hajmi:\nDiametri taxminan 12,742 km (7,918 milya)\n",
+  "earth_distance_from_sun": "Quyoshdan uzoqlik masofasi:\nTaxminan 149,6 million km (92,9 million milya)\n",
+  "earth_temperature": "Harorat:\nO'rtacha sirt harorati taxminan 15 ° C (59 ° F), lekin bu iqlim zonalari tufayli katta farq qilishi mumkin\n",
+  "earth_additional_info": "Qo'shimcha ma'lumot:\nU bitta tabiiy sun'iy yo'ldoshga (Oy) ega va Quyoshdan uchinchi sayyoradir",
+
+  "mars_desc": "Tavsif:\nMars ko'pincha uning yuzasidagi temir oksidi tufayli qizg'ish ko'ringani uchun 'Qizil sayyora' deb ataladi.",
+  "mars_size": "Hajmi:\nDiametri taxminan 6,779 km (4,212 milya)\n",
+  "mars_distance_from_sun": "Quyoshdan uzoqlik masofasi:\nTaxminan 227,9 million km (141,6 million milya)\n",
+  "mars_temperature": "Harorat:\nYozda ekvator yaqinida -87°C (-125°F) dan maksimal 20°C (68°F) gacha oʻzgarib turadi.\n",
+  "mars_additional_info": "Qo'shimcha ma'lumot:\nMarsda qutb muzliklari bor, o'tmishdagi suyuq suv oqimlarining dalillarini bir nechta kosmonavt va qo'nuvchilar uning yuzasi orqali o'rganishgan.",
+
+  "jupiter_desc": "Tavsif:\nYupiter bizning quyosh sistemamizdagi eng katta sayyora bo'lib, o'zining ulkan hajmi va kuchli magnit maydoni bilan mashhur hisoblanadi.",
+  "jupiter_size": "Hajmi:\nDiametri taxminan 139 822 km (86 881 milya)",
+  "jupiter_distance_from_sun": "Quyoshdan uzoqlik masofasi:\nTaxminan 778,5 million km (483,8 million milya)\n",
+  "jupiter_temperature": "Harorat:\nHaqiqiy qattiq sirtga ega emas, lekin uning yuqori bulutlari -145 ° C (-234 ° F) atrofida haroratga ega.\n",
+  "jupiter_additional_info": "Qo'shimcha ma'lumot:\nYupiterda katta qizil nuqta va kuchli bo'ron bor va u asosan vodorod va geliydan tashkil topgan gaz giganti hisoblanadi.",
+
+  "saturn_desc": "Tavsif:\nSaturn o'zining ajoyib va keng halqasi bilan tanilgandir",
+  "saturn_size": "Hajmi:\nDiametri taxminan 116,464 km (72,366 milya)\n",
+  "saturn_distance_from_sun": "Quyoshdan uzoqlik masofasi:\nTaxminan 778,5 million km (483,8 million milya)\n",
+  "saturn_temperature": "Harorat:\nYupiterga o'xshab, uning yuqori bulutlari -178 ° C (-288 ° F) atrofida haroratga ega.\n",
+  "saturn_additional_info": "Qo'shimcha ma'lumot:\nSaturn halqalari muz va tosh zarralaridan iborat bo'lib, u turli yo'ldoshlar tizimiga ega, jumladan Titan va Enseladus",
+
+  "uranus_desc": "Tavsif:\nUran o'zining haddan tashqari eksenel egilishi bilan ajralib turadi, bu uning orbital sayyorasiga deyarli perpendikulyar aylanishiga olib keladi.\n",
+  "uranus_size": "Hajmi:\nDiametri taxminan 50,724 km (31,518 milya)\n",
+  "uranus_distance_from_sun": "uyoshdan uzoqlik masofasi:\nTaxminan 2,87 milliard km (1,78 milliard milya)\n",
+  "uranus_temperature": "Harorat:\nJuda sovuq, o'rtacha harorati -224°C (-371°F)\n",
+  "uranus_additional_info": "Qo'shimcha ma'lumot:\nUran metanga boy atmosferasi va murakkab halqa tizimi tufayli och ko'k-yashil rangga ega",
+
+  "neptune_desc": "Tavsif:\nNeptun Quyoshdan eng uzoqda joylashgan sayyora bo'lib, o'zining moviy rangi bilan mashhurdir\n",
+  "neptune_size": "Hajmi:\nDiametri taxminan 49,244 km (30,598 milya)\n",
+  "neptune_distance_from_sun": "Quyoshdan uzoqlik masofasi:\nTaxminan 4,5 milliard km (2,8 milliard milya)\n",
+  "neptune_temperature": "Harorat:\nUranga o'xshash, o'rtacha harorati -218 ° C (-360 ° F) atrofida.\n",
+  "neptune_additional_info": "Qoʻshimcha maʼlumot:\nNeptunda kuchli shamollar va Yupiterning Buyuk Qizil Dogʻiga oʻxshash boʻron boʻlgan Buyuk qora nuqta bor.",
+
+
+  "mercury_funny_fact" : "Merkuriyning kuni o'z yilidan uzoqroq! Merkuriyda bir kun taxminan 59 Yer kunini oladi, uning yili esa atigi 88 Yer kunini oladi.",
+  "venus_funny_fact" : "Venera ko'pchilik sayyoralarga qaraganda teskari yo'nalishda aylanadi. Uning 'retrograd' aylanishi bor, shuning uchun agar siz Venerada tursangiz, Quyosh g'arbdan chiqib, sharqdan botadi.",
+  "earth_funny_fact" : "Yerda shokolad borligi ma'lum bo'lgan yagona sayyora. Xo'sh, Aniq ayta olmaymizku, lekin bizda kakao daraxtlari bor va bu boshlanishi \uD83D\uDE05!",
+  "mars_funny_fact" : "Marsda quyosh tizimidagi Olympus Mons nomli eng katta vulqon bor. U shunchalik kattaki, agar siz uning cho'qqisida tursangiz, vulqonda ekanligingizni ham sezmay qolasiz - bu juda yumshoq egilgan!",
+  "jupiter_funny_fact" : "Yupiterning ulkan o'lchami shunchalik ta'sirliki, u quyosh tizimidagi barcha boshqa sayyoralarni uning ichida bo'sh joy bilan sig'dira oladi - bu sayyoralar bazmining eng katta mezboniga o'xshaydi \uD83D\uDE05",
+  "saturn_funny_fact" : "Saturn halqalari aylanishni to'xtatishni unutgan kosmik halqaga o'xshaydi. Balki Saturn haqiqatan ham raqsga tushishni yaxshi ko'rar, nima deysiz \uD83D\uDE03?!",
+  "uranus_funny_fact" : "Uran o'z tomoniga o'raladi. Agar siz sayyoraviy sakrash o'yiniga qo'shilish uchun sayyora izlayotgan bo'lsangiz, Uran sizning eng yaxshi tanlovingiz bo'lishi mumkin.",
+  "neptune_funny_fact" : "Neptun shamollari juda tezdir, garchi u Quyoshdan juda uzoqda bo'lsa ham. Neptun tezlikka bo'lgan ehtiyojga qarshi tura olmaganga o'xshaydi."
+}
+
+
+
+
