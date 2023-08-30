@@ -18,14 +18,11 @@ dependencies:
 
   google_fonts: ^5.1.0
 
-  flutter_carousel_slider: ^1.1.0
+
   lottie: ^2.6.0
   bubble: ^1.2.1
   easy_localization: ^3.0.2
-  webview_flutter: ^4.2.3
-  path_provider: ^2.1.0
-  webview_flutter_android: ^3.9.3
-  webview_flutter_wkwebview: ^3.7.3
+  carousel_slider: ^4.2.1
 
 
 dev_dependencies:

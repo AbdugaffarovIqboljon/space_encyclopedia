@@ -121,27 +121,25 @@ class _DetailScreenState extends State<DetailScreen>
           ),
           Align(
             alignment: Alignment.bottomCenter,
-            child: Expanded(
-              child: Container(
-                height: 160,
-                padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 25),
-                decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.45),
-                  border: Border.all(color: Colors.black54, width: 2),
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(15),
-                    topRight: Radius.circular(15),
-                  ),
+            child: Container(
+              height: 160,
+              padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 25),
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.45),
+                border: Border.all(color: Colors.black54, width: 2),
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(15),
+                  topRight: Radius.circular(15),
                 ),
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.vertical,
-                  child: Text(
-                    widget.model.content,
-                    style: GoogleFonts.poppins(
-                      fontSize: 18,
-                      color: Colors.black,
-                      fontWeight: FontWeight.w600,
-                    ),
+              ),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                child: Text(
+                  widget.model.content,
+                  style: GoogleFonts.poppins(
+                    fontSize: 18,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
               ),
