@@ -7,7 +7,6 @@ import 'package:space_encyclopedia/view/planet_list_view.dart';
 
 import '../controller/routes/navigate_to_detail_screen.dart';
 
-
 class CustomCarouselSlider extends StatelessWidget {
   const CustomCarouselSlider({
     super.key,
@@ -20,7 +19,6 @@ class CustomCarouselSlider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final List<Widget> planetWidgets = [
       PlanetListView(
         scaleX: 2.25,
@@ -34,7 +32,8 @@ class CustomCarouselSlider extends StatelessWidget {
         additionalInfo: 'mercury_additional_info'.tr(),
         onTap: () {
           navigateToDetailScreen(context, mercuryDetailScreen);
-        }, tag: 'mercury_tag',
+        },
+        tag: 'mercury_tag',
       ),
       PlanetListView(
         scaleX: 1.75,
@@ -48,7 +47,8 @@ class CustomCarouselSlider extends StatelessWidget {
         additionalInfo: 'venus_additional_info'.tr(),
         onTap: () {
           navigateToDetailScreen(context, venusDetailScreen);
-        }, tag: 'venus_tag',
+        },
+        tag: 'venus_tag',
       ),
       PlanetListView(
         scaleX: 2.25,
@@ -62,7 +62,8 @@ class CustomCarouselSlider extends StatelessWidget {
         additionalInfo: 'earth_additional_info'.tr(),
         onTap: () {
           navigateToDetailScreen(context, earthDetailScreen);
-        }, tag: 'earth_tag',
+        },
+        tag: 'earth_tag',
       ),
       PlanetListView(
         scaleX: 1.2,
@@ -76,7 +77,8 @@ class CustomCarouselSlider extends StatelessWidget {
         additionalInfo: 'mars_additional_info'.tr(),
         onTap: () {
           navigateToDetailScreen(context, marsDetailScreen);
-        }, tag: 'mars_tag',
+        },
+        tag: 'mars_tag',
       ),
       PlanetListView(
         scaleX: 1.06,
@@ -90,7 +92,8 @@ class CustomCarouselSlider extends StatelessWidget {
         additionalInfo: 'jupiter_additional_info'.tr(),
         onTap: () {
           navigateToDetailScreen(context, jupiterDetailScreen);
-        }, tag: 'jupiter_tag',
+        },
+        tag: 'jupiter_tag',
       ),
       PlanetListView(
         scaleX: 2.1,
@@ -104,7 +107,8 @@ class CustomCarouselSlider extends StatelessWidget {
         additionalInfo: 'saturn_additional_info'.tr(),
         onTap: () {
           navigateToDetailScreen(context, saturnDetailScreen);
-        }, tag: 'saturn_tag',
+        },
+        tag: 'saturn_tag',
       ),
       PlanetListView(
         scaleX: 1.75,
@@ -118,7 +122,8 @@ class CustomCarouselSlider extends StatelessWidget {
         additionalInfo: 'uranus_additional_info'.tr(),
         onTap: () {
           navigateToDetailScreen(context, uranusDetailScreen);
-        }, tag: 'uranus_tag',
+        },
+        tag: 'uranus_tag',
       ),
       PlanetListView(
         scaleX: 1.3,
@@ -132,7 +137,8 @@ class CustomCarouselSlider extends StatelessWidget {
         additionalInfo: 'neptune_additional_info'.tr(),
         onTap: () {
           navigateToDetailScreen(context, neptuneDetailScreen);
-        }, tag: 'neptune_tag',
+        },
+        tag: 'neptune_tag',
       ),
     ];
 
@@ -158,4 +164,3 @@ class CustomCarouselSlider extends StatelessWidget {
 void navigateToDetailScreen(BuildContext context, Widget page) {
   Navigator.of(context).push(MaterialPageRoute(builder: (context) => page));
 }
-

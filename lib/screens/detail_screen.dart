@@ -149,7 +149,7 @@ class _DetailScreenState extends State<DetailScreen>
                     color: Colors.black,
                     fontWeight: FontWeight.w600,
                   ),
-                ),
+                ).tr(),
               ),
             ),
           ),
