@@ -1,4 +1,5 @@
 import 'package:bubble/bubble.dart';
+import 'package:carousel_slider/carousel_controller.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -18,6 +19,7 @@ class DetailScreen extends StatefulWidget {
 class _DetailScreenState extends State<DetailScreen>
     with TickerProviderStateMixin {
   late AnimationController _animationController;
+  CarouselController controller = CarouselController();
 
   @override
   void initState() {
@@ -35,16 +37,19 @@ class _DetailScreenState extends State<DetailScreen>
     super.dispose();
   }
 
-  void navigateToHomeScreen() {
+  void navigateToHomeScreen() async {
+    // Navigator.pop(context);
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (_) => const HomeScreen()),
+      MaterialPageRoute(
+        builder: (context) => const HomeScreen(),
+      ),
     );
   }
 
-
   @override
   Widget build(BuildContext context) {
+    final h = MediaQuery.sizeOf(context).height;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -71,17 +76,20 @@ class _DetailScreenState extends State<DetailScreen>
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: 220.0),
+            padding: EdgeInsets.only(bottom: h * 0.35),
             child: RotationTransition(
               turns: _animationController,
               alignment: Alignment.center,
               child: Transform.scale(
                 scaleX: 1.6,
                 scaleY: 1.6,
-                child: Image.asset(
-                  widget.model.image,
-                  height: 200,
-                  filterQuality: FilterQuality.medium,
+                child: Hero(
+                  tag: widget.model.tag,
+                  child: Image.asset(
+                    widget.model.image,
+                    height: 200,
+                    filterQuality: FilterQuality.medium,
+                  ),
                 ),
               ),
             ),

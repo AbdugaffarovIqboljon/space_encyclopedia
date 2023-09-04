@@ -13,6 +13,7 @@ class PlanetListView extends StatelessWidget {
   final String temperature;
   final String additionalInfo;
   final ImageProvider assetImage;
+  final String tag;
   final void Function() onTap;
 
   const PlanetListView({
@@ -26,7 +27,7 @@ class PlanetListView extends StatelessWidget {
     required this.size,
     required this.temperature,
     required this.additionalInfo,
-    required this.onTap,
+    required this.onTap, required this.tag,
   });
 
   @override
@@ -40,30 +41,34 @@ class PlanetListView extends StatelessWidget {
             Transform.scale(
               scaleY: scaleY,
               scaleX: scaleX,
-              child: Image(
-                height: MediaQuery.sizeOf(context).height * 0.35,
-                width: MediaQuery.sizeOf(context).width * 0.7,
-                image: assetImage,
+              child: GestureDetector(
+                onTap: onTap,
+                child: Hero(
+                  tag: tag,
+                  transitionOnUserGestures: true,
+                  child: Image(
+                    height: MediaQuery.sizeOf(context).height * 0.35,
+                    width: MediaQuery.sizeOf(context).width * 0.7,
+                    image: assetImage,
+                  ),
+                ),
               ),
             ),
             const SizedBox(height: 15),
-            GestureDetector(
-              onTap: onTap,
-              child: Container(
-                padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 5),
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white, width: 2),
-                  borderRadius: const BorderRadius.all(
-                    Radius.circular(15),
-                  ),
+            Container(
+              padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 5),
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.white, width: 2),
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(15),
                 ),
-                child: Text(
-                  planetName,
-                  style: GoogleFonts.poppins(
-                    fontSize: 16,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w900,
-                  ),
+              ),
+              child: Text(
+                planetName,
+                style: GoogleFonts.poppins(
+                  fontSize: 16,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w900,
                 ),
               ),
             ),

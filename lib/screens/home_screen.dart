@@ -2,10 +2,9 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import '../view/custom_slider.dart';
-import '../view/icon_languages.dart';
+import 'package:space_encyclopedia/view/custom_slider.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -14,13 +13,14 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<HomeScreen>{
   final controller = CarouselController();
   bool _lights = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black12,
       body: SafeArea(
         bottom: false,
         child: Stack(
@@ -36,10 +36,48 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-            CustomCarouselSlider(lights: _lights, controller: controller),
-            const IconLanguages(),
+            CustomCarouselSlider(lights: _lights, controller: controller)
+                .animate()
+                .scale(
+                  curve: const FlippedCurve(Curves.bounceInOut),
+                  duration: const Duration(milliseconds: 1000),
+                )
+                .flip(),
             Align(
-              alignment: const Alignment(-0.9, -0.82),
+              alignment: const Alignment(1, -1.01),
+              child: PopupMenuButton<Locale>(
+                color: Colors.blue.shade100,
+                elevation: 10,
+                tooltip: 'languages'.tr(),
+                shadowColor: Colors.cyanAccent,
+                onSelected: context.setLocale,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                ),
+                itemBuilder: (context) {
+                  return const [
+                    PopupMenuItem(
+                        value: Locale('uz', 'UZ'), child: Text("🇺🇿 UZ")),
+                    PopupMenuItem(
+                        value: Locale('en', 'US'), child: Text("🇺🇸 EN")),
+                    PopupMenuItem(
+                        value: Locale('ru', 'RU'), child: Text("🇷🇺 RU")),
+                  ];
+                },
+                icon: Container(
+                  height: 40,
+                  width: 40,
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.1),
+                    border: Border.all(color: Colors.red),
+                    shape: BoxShape.circle,
+                  ),
+                  child: const Icon(Icons.language, color: Colors.white),
+                ),
+              ),
+            ),
+            Align(
+              alignment: const Alignment(-0.9, -0.85),
               child: Column(
                 children: [
                   CupertinoSwitch(
