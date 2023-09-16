@@ -3,8 +3,11 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:space_encyclopedia/view/custom_slider.dart';
+
+
+import '../view/background_dottes.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -13,43 +16,28 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen>{
+class _HomeScreenState extends State<HomeScreen> {
   final controller = CarouselController();
-  bool _lights = false;
+  bool isVisible = false;
+
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.black12,
-      body: SafeArea(
-        bottom: false,
-        child: Stack(
-          children: [
-            SizedBox(
-              height: double.infinity,
-              width: double.infinity,
-              child: Transform.scale(
-                scaleX: 4,
-                scaleY: 4,
-                child: const Image(
-                  image: AssetImage('assets/images/img_stars_background.jpg'),
-                ),
-              ),
-            ),
-            CustomCarouselSlider(lights: _lights, controller: controller)
-                .animate()
-                .scale(
-                  curve: const FlippedCurve(Curves.bounceInOut),
-                  duration: const Duration(milliseconds: 1000),
-                )
-                .flip(),
-            Align(
-              alignment: const Alignment(1, -1.01),
-              child: PopupMenuButton<Locale>(
-                color: Colors.blue.shade100,
+    final h = MediaQuery.sizeOf(context).height;
+    final w = MediaQuery.sizeOf(context).width;
+    return ScreenUtilInit(
+      minTextAdapt: true,
+      designSize: const Size(430, 932),
+      builder: (context, child) {
+        return Scaffold(
+          appBar: AppBar(
+            backgroundColor: const Color(0xFF1946AD).withOpacity(0.9),
+            automaticallyImplyLeading: false,
+            actions: [
+              PopupMenuButton<Locale>(
+                color: Colors.blue.shade50,
                 elevation: 10,
                 tooltip: 'languages'.tr(),
-                shadowColor: Colors.cyanAccent,
                 onSelected: context.setLocale,
                 shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -65,42 +53,105 @@ class _HomeScreenState extends State<HomeScreen>{
                   ];
                 },
                 icon: Container(
-                  height: 40,
-                  width: 40,
+                  height: 40.sp,
+                  width: 40.sp,
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.1),
+                    color: Colors.black.withOpacity(0.1),
                     border: Border.all(color: Colors.red),
                     shape: BoxShape.circle,
                   ),
-                  child: const Icon(Icons.language, color: Colors.white),
+                  child:
+                  Icon(Icons.language, color: Colors.white.withOpacity(0.65)),
                 ),
-              ),
-            ),
-            Align(
-              alignment: const Alignment(-0.9, -0.85),
-              child: Column(
-                children: [
-                  CupertinoSwitch(
-                    value: _lights,
-                    onChanged: (bool value) {
-                      setState(() {
-                        _lights = value;
-                      });
-                    },
-                  ),
-                  Text(
-                    "auto_slide".tr(),
-                    style: GoogleFonts.poppins(
-                      color: Colors.white,
-                      fontSize: 12,
+              )
+            ],
+          ),
+          body: SafeArea(
+            bottom: false,
+            child: Stack(
+              children: [
+                Container(
+                  height: h,
+                  width: w,
+                  decoration: BoxDecoration(
+                    color: CupertinoColors.activeBlue.darkHighContrastColor,
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        const Color(0xFF1946AD).withOpacity(0.9),
+                        const Color(0xFF1946AD),
+                        const Color(0xFF0D0B2A),
+                      ],
                     ),
                   ),
-                ],
-              ),
+                ),
+                const BackgroundDotes(
+                  x: -0.75,
+                  y: -0.82,
+                  color: Colors.green,
+                  height: 20,
+                  width: 20,
+                ),
+                const BackgroundDotes(
+                  x: -1,
+                  y: -0.8,
+                  color: Colors.amber,
+                  height: 10,
+                  width: 10,
+                ),
+                const BackgroundDotes(
+                  x: -0.9,
+                  y: 0.15,
+                  color: Colors.deepOrangeAccent,
+                  height: 10,
+                  width: 10,
+                ),
+                const BackgroundDotes(
+                  x: -0.65,
+                  y: 0.75,
+                  color: Colors.deepPurpleAccent,
+                  height: 15,
+                  width: 15,
+                ),
+                const BackgroundDotes(
+                  x: -0.99,
+                  y: .8,
+                  color: Colors.cyan,
+                  height: 10,
+                  width: 10,
+                ),
+                const BackgroundDotes(
+                  x: 0.93,
+                  y: -0.8,
+                  color: Colors.blue,
+                  height: 20,
+                  width: 20,
+                ),
+                const BackgroundDotes(
+                  x: 0.96,
+                  y: 0.4,
+                  color: Colors.grey,
+                  height: 10,
+                  width: 10,
+                ),
+                const BackgroundDotes(
+                  x: 0.73,
+                  y: 0.9,
+                  color: Colors.yellowAccent,
+                  height: 15,
+                  width: 15,
+                ),
+                CustomCarouselSlider(controller: controller)
+                    .animate().slide(
+                  curve: const FlippedCurve(Curves.bounceIn),
+                  duration: const Duration(milliseconds: 950),
+                ).scale(),
+              ],
             ),
-          ],
-        ),
-      ),
+          ),
+        );
+      },
     );
   }
 }

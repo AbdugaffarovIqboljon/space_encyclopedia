@@ -25,6 +25,13 @@ dependencies:
   carousel_slider: ^4.2.1
   flutter_animate: ^4.2.0+1
 
+  youtube_player_iframe: ^4.0.4
+  youtube_player_flutter: ^8.1.2
+  flutter_screenutil: ^5.9.0
+
+
+
+
 
 dev_dependencies:
   flutter_test:
